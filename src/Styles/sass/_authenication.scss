@@ -1,3 +1,7 @@
+//sign in form
+.formContainer {
+    padding: 40px;
+}
 .signin {
     background-color: white;
     height: 600px;
@@ -5,4 +9,13 @@
 }
 h4 {
     color: black;
+}
+.signinBtn {
+    @include allBtn;
+    margin: 20px;
+    padding: 40px 20px;
+}
+.signinBtn:hover,
+.signinBtn:focus {
+    opacity: .6;
 }

@@ -241,6 +241,10 @@ html {
   position: sticky;
 }
 
+.formContainer {
+  padding: 40px;
+}
+
 .signin {
   background-color: white;
   height: 600px;
@@ -249,6 +253,26 @@ html {
 
 h4 {
   color: black;
+}
+
+.signinBtn {
+  border: none;
+  background: #DB7093;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 20px;
+  padding: 40px 20px;
+}
+
+.signinBtn:hover,
+.signinBtn:focus {
+  opacity: .6;
 }
 
 #homePage {
@@ -532,6 +556,6 @@ input {
 }
 
 body {
-  background-color: #000000;
+  background-color: #131515;
 }
 /*# sourceMappingURL=App.css.map */

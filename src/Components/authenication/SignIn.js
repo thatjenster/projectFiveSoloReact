@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 
 class SignIn extends Component {
     state = {
-
+        email: '',
+        password: '',
     }
     handleChange = (event) => {
-        console.log(event);
+        this.setState({
+            [event.target.id]: event.target.value
+        })
     }
     submitHandle = (event) => {
-        console.log(event);
+        event.preventDefault();
+        console.log(this.state);
     }
     render() {
         return(
@@ -20,7 +24,7 @@ class SignIn extends Component {
 
                     <labal htmlFor="password">Password</labal>
                     <input type="password" id="password" onChange={this.handleChange}/>
-                    <button>Login</button>
+                    <button className="signinBtn">Login</button>
                 </form>
 
             </div>
