@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Swal from 'sweetalert2';
 import TravelEntry from './TravelEntry';
 import TravelPost from './TravelPost';
+import TravelMap from './TravelMap';
 import firebase from './../../firebase.js';
 
 class TravelDiary extends Component {
@@ -132,9 +133,15 @@ class TravelDiary extends Component {
 					date={this.state.date}
 					countryInput={this.state.countryInput}
 					attrOne={this.state.attrOne}
-					inputError={this.state.inputError}
+                    inputError={this.state.inputError}
+                    autoFunction={this.onPlaceSelected}
 				/>
 			</div>
+            <div className="mapSection">
+                <TravelMap 
+                personalMemory={this.state.personalMemory}
+                />
+		    </div>
             </section>
             <div>
 			<ul className="personalDiary">
