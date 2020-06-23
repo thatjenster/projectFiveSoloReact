@@ -1,4 +1,17 @@
 $mainColor: #846075;
-$fontColor: black;
+$fontColor: #ffff;
 $mainFont: 'Lobster', cursive;
 $secondFont: 'Lato', sans-serif;
+
+@mixin allBtn {
+    border:none;
+    background:#DB7093;
+    border-radius: 10px;
+    color:white;
+    font-weight:bold;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition: all 0.5s;
+    
+}
