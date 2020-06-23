@@ -2,3 +2,12 @@
     background-color: $mainColor;
     position: sticky;
 }
+
+.contentContainer a {
+    font-size: 1rem;
+}
+a.navLogo {
+    font-size: 2rem;
+    font-family: $mainFont;
+    padding: 0 10px;
+}

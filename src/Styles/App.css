@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lato&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -241,6 +242,16 @@ html {
   position: sticky;
 }
 
+.contentContainer a {
+  font-size: 1rem;
+}
+
+a.navLogo {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  padding: 0 10px;
+}
+
 .formContainer {
   padding: 40px;
 }
@@ -280,7 +291,7 @@ h4 {
 }
 
 .photo {
-  margin: 100px auto 0 auto;
+  margin: 100px auto;
   width: 500px;
   height: 500px;
   border: solid #F8F4EF;
@@ -295,7 +306,7 @@ h4 {
   font-size: 2rem;
   top: 40rem;
   left: 34rem;
-  font-family: "Lobster", cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 600;
 }
 
