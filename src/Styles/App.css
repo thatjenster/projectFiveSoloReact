@@ -277,8 +277,9 @@ h4 {
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  margin: 20px;
+  margin: 20px auto;
   padding: 40px 20px;
+  width: 100%;
 }
 
 .signinBtn:hover,
@@ -414,7 +415,7 @@ h4 {
 
 h2 {
   margin: 0 auto;
-  color: #ffff;
+  color: #0000;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -452,7 +453,7 @@ form {
 }
 
 label {
-  color: #ffff;
+  color: #0000;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
