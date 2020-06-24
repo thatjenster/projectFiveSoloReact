@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/projectFiveSoloReact/static/css/main.bbe814a3.chunk.css",
-    "main.js": "/projectFiveSoloReact/static/js/main.208c83db.chunk.js",
-    "main.js.map": "/projectFiveSoloReact/static/js/main.208c83db.chunk.js.map",
+    "main.js": "/projectFiveSoloReact/static/js/main.215af836.chunk.js",
+    "main.js.map": "/projectFiveSoloReact/static/js/main.215af836.chunk.js.map",
     "runtime-main.js": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js",
     "runtime-main.js.map": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js.map",
     "static/css/2.9af23e3e.chunk.css": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css",
     "static/js/2.5909b1d3.chunk.js": "/projectFiveSoloReact/static/js/2.5909b1d3.chunk.js",
     "static/js/2.5909b1d3.chunk.js.map": "/projectFiveSoloReact/static/js/2.5909b1d3.chunk.js.map",
     "index.html": "/projectFiveSoloReact/index.html",
-    "precache-manifest.d63e1b84a46aed65409ccf9f70c05405.js": "/projectFiveSoloReact/precache-manifest.d63e1b84a46aed65409ccf9f70c05405.js",
+    "precache-manifest.267f7ba647e6c1c2faed18e12f0140e7.js": "/projectFiveSoloReact/precache-manifest.267f7ba647e6c1c2faed18e12f0140e7.js",
     "service-worker.js": "/projectFiveSoloReact/service-worker.js",
     "static/css/2.9af23e3e.chunk.css.map": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css.map",
     "static/css/main.bbe814a3.chunk.css.map": "/projectFiveSoloReact/static/css/main.bbe814a3.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.9af23e3e.chunk.css",
     "static/js/2.5909b1d3.chunk.js",
     "static/css/main.bbe814a3.chunk.css",
-    "static/js/main.208c83db.chunk.js"
+    "static/js/main.215af836.chunk.js"
   ]
 }
