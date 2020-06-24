@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from './../../firebase.js';
 import 'firebase/auth';
+import Swal from 'sweetalert2';
 
 class SignUp extends Component {
     state = {
@@ -17,24 +18,32 @@ class SignUp extends Component {
     }
     submitHandle = (event) => {
         event.preventDefault();
-        console.log(this.state);
     }
     signUp() {
         const email = document.querySelector('#emailup').value;
         const password = document.querySelector('#passwordup').value;
-        console.log(email);
+        const firstName = document.querySelector('#name').value;
+        const lastName = document.querySelector('#lastName').value;
+
         firebase.auth().createUserWithEmailAndPassword(email, password)
 
           .then((u) => {
-            console.log('Successfully Signed Up');
-            console.log(u.user.uid);
-            this.props.updateState(u.user.uid);
-
+            Swal.fire({
+                title: 'Yay, Please proceed to login',
+                type: 'success',
+                text: 'Have a Happy Memory!',
+                confirmButtonColor: '#846075',
+            })
           })
           
           .catch((err) => {
-            console.log(err.message);
-            alert('HELLO')
+            Swal.fire({
+                title: 'Please Register Again!',
+                type: 'error',
+                text: err.message,
+                confirmButtonColor: '#846075',
+                cancelButtonColor: '#1A1423',
+            })
           })
     }
     

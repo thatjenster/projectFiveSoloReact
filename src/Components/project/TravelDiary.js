@@ -20,33 +20,27 @@ class TravelDiary extends Component {
 				lng: ''
 			}
 		};
-    }
+	}
+	// fetch latest memory from firebase and update state
     componentDidMount() {
-
-		console.log(this.props.user);
 		this.state.dbRef.ref('users/' + this.props.user).on('value', response => {
-			console.log(this.state.personalMemory);
 			const newState = [];
 			const data = response.val();
-			console.log(data);
 			for (let key in data) {
 				newState.push({
 					log: data[key],
 					id: key
 				});
 			}
-
-				console.log(this.state.personalMemory);
 			this.setState({
 				personalMemory: newState
 			});
 		});
-    }
+	}
+	// event run after google autocomplete
     onPlaceSelected = ( place ) => {
 		const addressArray =  place.address_components;
 		const country = addressArray[0].long_name;
-		console.log(country);
-		console.log(this.props);
 
 		// Set these values in the state.
 		this.setState({
@@ -57,6 +51,7 @@ class TravelDiary extends Component {
 			}
 		})
 	};
+	// update state data base on change in form 
     handleChange = event => {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -66,16 +61,13 @@ class TravelDiary extends Component {
 	// VALIDATION CHECK: make sure user fill out all required field
 	inputCheck = () => {
 		let inputError = '';
-
 		if (
 			this.state.date.length === 0 ||
 			this.state.countryInput.length === 0 ||
 			this.state.attrOne.length === 0 
-
 		) {
 			inputError = 'Hello! Please fill it all out.';
 		}
-
 		if (inputError) {
 			this.setState({ inputError });
 			return false;
@@ -100,15 +92,13 @@ class TravelDiary extends Component {
 			});
 
 	// push to firebase
-				  console.log(this.props.user);
-
-			this.state.dbRef.ref('users/' + this.props.user).push({
-				date: this.state.date,
-				countryInput: this.state.countryInput,
-				attrOne: this.state.attrOne,
-				markerLat: this.state.markerPosition.lat,
-				markerLng: this.state.markerPosition.lng
-			});
+		this.state.dbRef.ref('users/' + this.props.user).push({
+			date: this.state.date,
+			countryInput: this.state.countryInput,
+			attrOne: this.state.attrOne,
+			markerLat: this.state.markerPosition.lat,
+			markerLng: this.state.markerPosition.lng
+		});
 		}
 	};
 
@@ -125,7 +115,6 @@ class TravelDiary extends Component {
 			if (result.value) {
 				this.state.dbRef.ref('users/' + this.props.user).child(memoryId).remove();
 			}
-			console.log(memoryId);
 		});
 	};
     render() {
@@ -133,6 +122,7 @@ class TravelDiary extends Component {
         <main>
             <section className='personalBoard'>
 			<div>
+				{/* travel entry form to submit a new memory */}
 				<TravelEntry
 					handleChange={this.handleChange}
 					handleClick={this.handleClick}
@@ -145,6 +135,7 @@ class TravelDiary extends Component {
 				/>
 			</div>
 			<div className="mapSection">
+				{/* display leaflet map */}
                 <TravelMap 
                 personalMemory={this.state.personalMemory}
                 />
@@ -152,6 +143,7 @@ class TravelDiary extends Component {
             </section>
 			<div>
 				<ul className="personalDiary">
+					{/* display memory base on user logged in */}
 					{this.state.personalMemory.map(entry => {
 						return (
 							<TravelPost

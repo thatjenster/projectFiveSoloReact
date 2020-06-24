@@ -2,7 +2,6 @@ import React from 'react'
 import 'font-awesome/css/font-awesome.min.css';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import L from 'leaflet';
-// import markerPin from './../../Assets/markerpin.png'
 
 class TravelMap extends React.Component {
   constructor(props) {
@@ -18,9 +17,7 @@ class TravelMap extends React.Component {
         className: 'leaflet-div-icon'
     });
 
-
     return (
-        
       <Map center={position} 
             zoom={2} 
             preferCanvas={false}

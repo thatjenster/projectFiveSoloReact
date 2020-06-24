@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './Styles/App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import firebase from './firebase.js';
 import 'firebase/auth';
 import Nav from './Components/layout/Nav';
 import Header from './Components/layout/Header';
@@ -24,11 +23,9 @@ class App extends Component {
   }
 
   updateState = (a) => {
-     console.log('user: ', a);
     this.setState({
       user: a,
     })
-    console.log(a);
   }
 
   showDiary = () => {
@@ -38,12 +35,9 @@ class App extends Component {
       showSignUp: false,
       showHeader: false
     })
-    console.log('is state updateing');
   }
 
   showLogin = () => {
-
-    console.log('running2');
     this.setState({
       showLogin: true,
       showDiary: false,
@@ -52,20 +46,17 @@ class App extends Component {
     })
   }
 
-    showSignUp = () => {
-
-      console.log('running1');
-      this.setState({
-        showDiary: false,
-        showLogin: false,
-        showSignUp: true,
-        showHeader: false
-      })
+  showSignUp = () => {
+    this.setState({
+      showDiary: false,
+      showLogin: false,
+      showSignUp: true,
+      showHeader: false
+    })
 
   }
     
-  render() 
-  {
+  render() {
     let showItem;
     if(this.state.showSignUp && !this.state.showHeader ) {
      showItem =  <SignUp updateState={this.updateState}/> ;
@@ -73,26 +64,18 @@ class App extends Component {
       showItem = <SignIn updateState={this.updateState} updateDiary={this.showDiary}/> ;
     } else if (this.state.showDiary){
       showItem = <TravelDiary  user={this.state.user}/>;
-      console.log('are we in here');
     } 
     else{
       showItem = <Header />;
     }
+
   return (
     <BrowserRouter >
       <div className="App">
         <Nav showLogin={this.showLogin} showSignUp={this.showSignUp}/>
-
         <div className="mainSectionContainer">
-        {/* {this.state.showSignUp ?  <SignUp updateState={this.updateState}/> :  <Header />}
-        {this.state.showLogin ?  <SignIn updateState={this.updateState}/> :  <Header />} */}
         {showItem}
-   
-          {/* {
-          !this.state.user ?  <SignUp updateState={this.updateState}/> :  <div></div>
-        } */}
         </div>
-      
         <Footer />
       </div>
     </BrowserRouter>

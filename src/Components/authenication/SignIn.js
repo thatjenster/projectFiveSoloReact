@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from './../../firebase.js';
 import 'firebase/auth';
+import Swal from 'sweetalert2';
 
 class SignIn extends Component {
     state = {
@@ -16,7 +17,6 @@ class SignIn extends Component {
     }
     submitHandle = (event) => {
         event.preventDefault();
-        console.log(this.state);
     }
     login = ()=> {
         const email = document.querySelector('#email').value;
@@ -25,15 +25,18 @@ class SignIn extends Component {
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((u) => {
 
-        console.log(u.user.uid);
-
         this.props.updateState(u.user.uid);
         this.props.updateDiary();
-        
-        console.log('Successfully Logged In');
+
         })
         .catch((err) => {
-        console.log(err);
+            Swal.fire({
+                title: 'Please Try Again',
+                text: err.message,
+                type: 'error',
+                confirmButtonColor: '#846075',
+                cancelButtonColor: '#1A1423',
+            })
         })
       }
       
@@ -48,7 +51,6 @@ class SignIn extends Component {
                     <labal htmlFor="password">Password</labal>
                     <input type="password" id="password" onChange={this.handleChange}/>
                     <Link to='/journal' ><button className="signinBtn" onClick={this.login}>LogIn</button></Link>
-                    
                 </form>
 
             </div>

@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import firebase from './../../firebase.js';
-import 'firebase/auth';
+import React from 'react';
 
-class Login extends Component {
-
-    loggedOut = () => {  firebase.auth().signOut().then(function() {
-        console.log("Im logged out");
-      }).catch(function(error) {
-        console.log(error);
-      })
-        window.location.reload(true);
+class Signout extends React.Component {
+    constructor(props) {
+      super(props);
     }
-    render() {
+
+    render(){
     return(
         <ul className="right">
-            <li><NavLink to ='/' onClick={this.loggedOut}>Log Out</NavLink></li>
-            {/* <li><NavLink to ='/journal' className="btn btn-floating purple"></NavLink></li> */}
+            <li><a onClick={this.props.showSignUp}>Sign Up</a></li>
+            <li><a onClick={this.props.showLogin}>LogIn</a></li>
         </ul>
     )
     }
 }
 
-export default Login;
+export default Signout;

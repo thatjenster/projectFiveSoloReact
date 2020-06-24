@@ -1,5 +1,4 @@
 import React from 'react';
-// import mountfuji from './Assets/mountfuji.png'
 
 const Header = () => {
     return(

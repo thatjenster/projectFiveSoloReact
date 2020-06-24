@@ -9,20 +9,21 @@ class TravelEntry extends Component {
             attrOne,
 			date,
 			inputError,
-
 		} = this.props;
+
         return(
             <div>
+				{/* memory inpur form */}
 				<form className="travelEntry" action='submit'>
 					<h2>Your Memories</h2>
-
 					<label htmlFor='date' className='date'>
 						When did you go?
 					</label>
 					<input type='date' name='date' onChange={handleChange} value={date} />
                     <label htmlFor='countryInput'>Where did you go?</label>
+					{/* autocomplete from google to get location */}
 					<Autocomplete
-						apiKey='AIzaSyCId7mm6Z_EsqTRuwxRtMzJtoGfPzNxyWI'
+						apiKey= 'AIzaSyA0q4l001f40aI0cHAqqWcebpVOPJNr_XE'
 						onPlaceSelected={ (place) => {
 							this.props.autoFunction(place);
 						  }}
