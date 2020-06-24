@@ -32,7 +32,7 @@ class TravelMap extends React.Component {
          {this.props.personalMemory.map((popper) => {
              console.log(popper);
              console.log(this.props.personalMemory);
-             let pos = [popper.dt.markerLat, popper.dt.markerLng]
+             let pos = [popper.log.markerLat, popper.log.markerLng]
             return(
             <Marker position={pos} key={popper.id} >
                 <Popup>

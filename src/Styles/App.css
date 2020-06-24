@@ -287,6 +287,10 @@ h4 {
   opacity: .6;
 }
 
+#homepage {
+  height: 100%;
+}
+
 .photo {
   margin: 100px auto;
   width: 500px;
@@ -531,10 +535,6 @@ input {
   margin: 0 10px;
 }
 
-.mainFooter {
-  background-color: #846075;
-}
-
 .mainFooter p {
   font-size: 1.2rem;
   font-weight: 400;
@@ -561,7 +561,7 @@ input {
 
 .footerSocial a {
   font-size: 3rem;
-  color: pink;
+  color: #846075;
   padding: 0 20px;
 }
 
@@ -584,5 +584,9 @@ input {
 
 body {
   background-color: #EFEFF0;
+}
+
+html {
+  height: 100%;
 }
 /*# sourceMappingURL=App.css.map */

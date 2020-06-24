@@ -1,5 +1,4 @@
 .mainFooter {
-    background-color: $mainColor;
     p {
         font-size: 1.2rem;
         font-weight: 400;
@@ -20,7 +19,7 @@
 
     a {
         font-size: 3rem;
-        color: pink;
+        color: $mainColor;
         padding: 0 20px;
     }
 }

@@ -22,15 +22,21 @@ class TravelDiary extends Component {
 		};
     }
     componentDidMount() {
+
+		console.log(this.props.user);
 		this.state.dbRef.ref('users/' + this.props.user).on('value', response => {
+			console.log(this.state.personalMemory);
 			const newState = [];
 			const data = response.val();
+			console.log(data);
 			for (let key in data) {
 				newState.push({
-					dt: data[key],
+					log: data[key],
 					id: key
 				});
 			}
+
+				console.log(this.state.personalMemory);
 			this.setState({
 				personalMemory: newState
 			});
@@ -94,7 +100,7 @@ class TravelDiary extends Component {
 			});
 
 	// push to firebase
-				  console.log(this.state.user);
+				  console.log(this.props.user);
 
 			this.state.dbRef.ref('users/' + this.props.user).push({
 				date: this.state.date,
@@ -117,7 +123,7 @@ class TravelDiary extends Component {
 			confirmButtonText: 'Yes, delete it!'
 		}).then(result => {
 			if (result.value) {
-				this.state.dbRef.ref().child(memoryId).remove();
+				this.state.dbRef.ref('users/' + this.props.user).child(memoryId).remove();
 			}
 			console.log(memoryId);
 		});
@@ -144,9 +150,9 @@ class TravelDiary extends Component {
 						return (
 							<TravelPost
 								key={entry.id.user}
-								date={entry.dt.date}
-								countryInput={entry.dt.countryInput}
-								attrOne={entry.dt.attrOne}
+								date={entry.log.date}
+								countryInput={entry.log.countryInput}
+								attrOne={entry.log.attrOne}
 								deleteEntry={() => this.deleteMemory(entry.id)}
 							/>
 						);
