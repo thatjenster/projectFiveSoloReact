@@ -530,6 +530,7 @@ input {
   height: 600px;
   width: 600px;
   border: 10px solid #846075;
+  border-radius: 10px;
 }
 
 .mainFooter {

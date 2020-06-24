@@ -66,11 +66,11 @@ class App extends Component {
 
   updateState = (a,b) => {
 
-    console.log('in updateState')
-    this.State = ({
+    console.log(a)
+    this.setState = ({
       user: a.user,
       personalMemory: b,
-    })
+    }, ()=> {console.log('ami called')})
     console.log(this.State);
   }
     
