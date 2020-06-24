@@ -27,7 +27,7 @@ class TravelDiary extends Component {
 			const data = response.val();
 			for (let key in data) {
 				newState.push({
-					log: data[key],
+					dt: data[key],
 					id: key
 				});
 			}
@@ -150,9 +150,9 @@ class TravelDiary extends Component {
 					return (
 						<TravelPost
 							key={entry.id}
-							date={entry.log.date}
-							countryInput={entry.log.countryInput}
-							attrOne={entry.log.attrOne}
+							date={entry.dt.date}
+							countryInput={entry.dt.countryInput}
+							attrOne={entry.dt.attrOne}
 							deleteEntry={() => this.deleteMemory(entry.id)}
 						/>
 					);

@@ -9,7 +9,6 @@ class TravelMap extends React.Component {
   }
 
   render() {
-    // const position = [this.state.lat, this.state.lng];
      const position = [43.6532, -79.3832];
     //  const iconPerson = new L.Icon({
     //     iconUrl: require('./../assets/star.jpg'),
@@ -31,17 +30,18 @@ class TravelMap extends React.Component {
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
 
-         {this.props.personalMemory.map((popper) => {
+         {/* {this.props.personalMemory.map((popper) => {
              console.log(popper);
-            //  let pos = [popper.log.markerLat, popper.log.markerLng]
-            // return(
-            // <Marker position={pos} key={popper.id} >
-            //     <Popup>
-            //       I was here. <br/> and it was AWESOME.
-            //     </Popup>
-            // </Marker>
-            // )
-         })}
+             console.log(this.props.personalMemory);
+             let pos = [popper.dt.markerLat, popper.dt.markerLng]
+            return(
+            <Marker position={pos} key={popper.id} >
+                <Popup>
+                  I was here. <br/> and it was AWESOME.
+                </Popup>
+            </Marker>
+            )
+         })} */}
       </Map>
     );
   }
