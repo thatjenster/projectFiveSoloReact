@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import firebase from './../../firebase.js';
+import 'firebase/auth';
 
 class SignIn extends Component {
     // constructor(props) {
@@ -7,6 +9,7 @@ class SignIn extends Component {
         state = {
             email: '',
             password: '',
+            uid:'',
         }
         
     // }
@@ -20,36 +23,41 @@ class SignIn extends Component {
         event.preventDefault();
         console.log(this.state);
     }
-    // login() {
-    //     const email = document.querySelector('#email').value;
-    //     const password = document.querySelector('#password').value;
-    //     firebase.auth().signInWithEmailAndPassword(email, password)
-    //       .then((u) => {
+    login = ()=> {
+        const email = document.querySelector('#email').value;
+        const password = document.querySelector('#password').value;
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((u) => {
 
-    //         console.log(u.user.uid);
-    //         firebase.database().ref('users/' + u.user.uid).on('value', response => {
-    //           console.log(response);
-    //           const newState = [];
-    //           const data = response.val();
-    //           console.log(data);
-    //           for (let key in data) {
-    //             newState.push({
-    //               log: data[key],
-    //               id: key
-    //             });
-    //           }
-    //           console.log(newState);
-    //         //   this.setState({
-    //         //     personalMemory: newState
-    //         //   });
+            this.setState({
+                user: u.user.uid,
+            })
+
+            console.log(u.user.uid);
+            firebase.database().ref('users/' + u.user.uid).on('value', response => {
+              console.log(response);
+              const newState = [];
+              const data = response.val();
+              console.log(data);
+              for (let key in data) {
+                newState.push({
+                  log: data[key],
+                  id: key
+                });
+              }
+              console.log(newState);
+            //   this.setState({
+            //     personalMemory: newState
+            //   });
         
-    //         });
-    //         console.log('Successfully Logged In');
-    //       })
-    //       .catch((err) => {
-    //         console.log(err);
-    //       })
-    //   }
+            });
+            // this.props.updateState(u.user.uid);
+            console.log('Successfully Logged In');
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
       
     render() {
         return(
@@ -61,7 +69,9 @@ class SignIn extends Component {
 
                     <labal htmlFor="password">Password</labal>
                     <input type="password" id="password" onChange={this.handleChange}/>
-                    <Link to='/journal' ><button className="signinBtn" onClick={this.props.login}>LogIn</button></Link>
+                    <Link to='/journal' ><button className="signinBtn" onClick={this.props.updateState(this.state.uid)}>LogIn</button></Link>
+
+                    {console.log(this.state)}
                     
                 </form>
 

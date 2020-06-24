@@ -16,8 +16,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: null,
-      personalMemory: '',
+      user: '',
+      personalMemory: 'pm',
     }
   }
 
@@ -32,48 +32,53 @@ class App extends Component {
   login = () => {
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
-    // this.setState = {
-    //   user: ,
-    //   personalMemory: [],
-    // }
+
+    let user, newData;
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((u) => {
 
         console.log(u.user.uid);
-        firebase.database().ref('users/' + u.user.uid).on('value', response => {
-          console.log(response);
-          const newState = [];
-          const data = response.val();
-          console.log(data);
-          for (let key in data) {
-            newState.push({
-              log: data[key],
-              id: key
-            });
-          }
-          console.log(newState);
-          // this.updateState(u, newState);
+        // console.log('test');
+        
+        // firebase.database().ref('users/' + u.user.uid).on('value', response => {
+        //   console.log(response);
+    
+        //   const data = response.val();
+        //   console.log(data);
+        //   for (let key in data) {
+        //     newData.push({
+        //       log: data[key],
+        //       id: key
+        //     });
+        //   }
 
-          console.log(this.State);
+        //   console.log(newData);
+        //   user = u;
 
-        });
-        console.log('Successfully Logged In');
-       
-     
+
+        // });
+        // console.log('Successfully Logged In');
+
+        // // this.updateState(user, newData);
+
+        // console.log(user.user.uid)
+
+       user = u;
+       this.updateState(user);
       })
       .catch((err) => {
         console.log(err);
       })
+
+      
   }
 
-  updateState = (a,b) => {
-
-    console.log(a)
+  updateState = (a) => {
+     console.log('user', a);
     this.setState = ({
-      user: a.user,
-      personalMemory: b,
-    }, ()=> {console.log('ami called')})
-    console.log(this.State);
+      user: a,
+    },()=> {console.log('stateupdated')})
+    console.log(a);
   }
     
   render() {
@@ -84,7 +89,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Header} />
           <Route path='/journal' render={(props) => <TravelDiary {...props} user={this.user} personalMemory={this.personalMemory} /> } />
-          <Route path='/signin' render={(props) => <SignIn {...props} login={this.login} /> } />
+          <Route path='/signin' render={(props) => <SignIn {...props} login={this.login} updateState={this.updateState}/> } />
           {/* <Route path="/signup" render={(props) => <SignUp {...props} updateUser={this.updateUser} /> } /> */}
         </Switch>
         <Footer />
