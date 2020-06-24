@@ -29,8 +29,7 @@ class TravelMap extends React.Component {
           attribution='&copy; <a href="http://openstreeetmap.org/copyright">OpenStreetMap</a> contributors'
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-
-         {/* {this.props.personalMemory.map((popper) => {
+         {this.props.personalMemory.map((popper) => {
              console.log(popper);
              console.log(this.props.personalMemory);
              let pos = [popper.dt.markerLat, popper.dt.markerLng]
@@ -41,7 +40,7 @@ class TravelMap extends React.Component {
                 </Popup>
             </Marker>
             )
-         })} */}
+         })}
       </Map>
     );
   }

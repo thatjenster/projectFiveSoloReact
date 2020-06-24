@@ -9,7 +9,6 @@ class SignIn extends Component {
         state = {
             email: '',
             password: '',
-            uid:'',
         }
         
     // }
@@ -26,32 +25,16 @@ class SignIn extends Component {
     login = ()=> {
         const email = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
+        
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((u) => {
 
-            this.setState({
-                user: u.user.uid,
-            })
 
             console.log(u.user.uid);
-            firebase.database().ref('users/' + u.user.uid).on('value', response => {
-              console.log(response);
-              const newState = [];
-              const data = response.val();
-              console.log(data);
-              for (let key in data) {
-                newState.push({
-                  log: data[key],
-                  id: key
-                });
-              }
-              console.log(newState);
-            //   this.setState({
-            //     personalMemory: newState
-            //   });
+  
+
         
-            });
-            // this.props.updateState(u.user.uid);
+            this.props.updateState(u.user.uid);
             console.log('Successfully Logged In');
           })
           .catch((err) => {
@@ -69,7 +52,7 @@ class SignIn extends Component {
 
                     <labal htmlFor="password">Password</labal>
                     <input type="password" id="password" onChange={this.handleChange}/>
-                    <Link to='/journal' ><button className="signinBtn" onClick={this.props.updateState(this.state.uid)}>LogIn</button></Link>
+                    <Link to='/journal' ><button className="signinBtn" onClick={this.login}>LogIn</button></Link>
 
                     {console.log(this.state)}
                     

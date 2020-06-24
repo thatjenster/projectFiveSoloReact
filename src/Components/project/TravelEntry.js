@@ -6,7 +6,6 @@ class TravelEntry extends Component {
         const {
 			handleChange,
             handleClick,
-            countryInput,
             attrOne,
 			date,
 			inputError,
@@ -23,19 +22,12 @@ class TravelEntry extends Component {
 					<input type='date' name='date' onChange={handleChange} value={date} />
                     <label htmlFor='countryInput'>Where did you go?</label>
 					<Autocomplete
-						apiKey='AIzaSyA0q4l001f40aI0cHAqqWcebpVOPJNr_XE'
+						apiKey='AIzaSyCId7mm6Z_EsqTRuwxRtMzJtoGfPzNxyWI'
 						onPlaceSelected={ (place) => {
 							this.props.autoFunction(place);
 						  }}
 						types={['(regions)']}
 					/>
-                    {/* <input
-						type='text'
-						name='countryInput'
-                        onChange={handleChange}
-                        value={countryInput}
-					/> */}
-					
                     <h2>Favorite Moments: </h2>
 					<label htmlFor='attrOne'><i className="fa fa-paper-plane-o" aria-hidden="true"></i>
 					</label>
@@ -45,9 +37,7 @@ class TravelEntry extends Component {
                         onChange={handleChange}
                         value={attrOne}
 					/>
-
 					<p className='errorMessage'>{inputError}</p>
-
 					<button className="button formBtn" onClick={handleClick}>Post Me!</button>
 				</form>
             </div>

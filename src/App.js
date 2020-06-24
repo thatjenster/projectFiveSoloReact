@@ -17,7 +17,6 @@ class App extends Component {
     super();
     this.state = {
       user: '',
-      personalMemory: 'pm',
     }
   }
 
@@ -29,55 +28,55 @@ class App extends Component {
   // }
 
 
-  login = () => {
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
+  // login = () => {
+  //   const email = document.querySelector('#email').value;
+  //   const password = document.querySelector('#password').value;
 
-    let user, newData;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((u) => {
+  //   let user, newData;
+  //   firebase.auth().signInWithEmailAndPassword(email, password)
+  //     .then((u) => {
 
-        console.log(u.user.uid);
-        // console.log('test');
+  //       console.log(u.user.uid);
+  //       // console.log('test');
         
-        // firebase.database().ref('users/' + u.user.uid).on('value', response => {
-        //   console.log(response);
+  //       // firebase.database().ref('users/' + u.user.uid).on('value', response => {
+  //       //   console.log(response);
     
-        //   const data = response.val();
-        //   console.log(data);
-        //   for (let key in data) {
-        //     newData.push({
-        //       log: data[key],
-        //       id: key
-        //     });
-        //   }
+  //       //   const data = response.val();
+  //       //   console.log(data);
+  //       //   for (let key in data) {
+  //       //     newData.push({
+  //       //       log: data[key],
+  //       //       id: key
+  //       //     });
+  //       //   }
 
-        //   console.log(newData);
-        //   user = u;
+  //       //   console.log(newData);
+  //       //   user = u;
 
 
-        // });
-        // console.log('Successfully Logged In');
+  //       // });
+  //       // console.log('Successfully Logged In');
 
-        // // this.updateState(user, newData);
+  //       // // this.updateState(user, newData);
 
-        // console.log(user.user.uid)
+  //       // console.log(user.user.uid)
 
-       user = u;
-       this.updateState(user);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+  //      user = u;
+  //      this.updateState(user);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     })
 
       
-  }
+  // }
 
   updateState = (a) => {
-     console.log('user', a);
+     console.log('user: ', a);
     this.setState({
       user: a,
-    },()=> {console.log('stateupdated')})
+    })
     console.log(a);
   }
     
@@ -87,8 +86,8 @@ class App extends Component {
       <div className="App">
         <Nav />
         <Switch>
-          <Route exact path='/projectFiveSoloReact' component={Header} />
-          <Route path='/journal' render={(props) => <TravelDiary {...props} user={this.user} personalMemory={this.personalMemory} /> } />
+          <Route exact path='/' component={Header} />
+          <Route path='/journal' render={(props) => <TravelDiary {...props} user={this.user} /> } />
           <Route path='/signin' render={(props) => <SignIn {...props} login={this.login} updateState={this.updateState}/> } />
           <Route path="/signup" render={(props) => <SignUp {...props} updateUser={this.updateUser} /> } />
         </Switch>

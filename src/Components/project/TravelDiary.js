@@ -22,7 +22,7 @@ class TravelDiary extends Component {
 		};
     }
     componentDidMount() {
-		this.state.dbRef.ref().on('value', response => {
+		this.state.dbRef.ref('users/' + this.props.user).on('value', response => {
 			const newState = [];
 			const data = response.val();
 			for (let key in data) {
@@ -37,8 +37,6 @@ class TravelDiary extends Component {
 		});
     }
     onPlaceSelected = ( place ) => {
-		// console.log( 'plc', place );
-		// console.log( 'plc2', place.geometry.location.lat());
 		const addressArray =  place.address_components;
 		const country = addressArray[0].long_name;
 		console.log(country);
@@ -98,7 +96,7 @@ class TravelDiary extends Component {
 	// push to firebase
 				  console.log(this.state.user);
 
-			this.state.dbRef.ref('users/X0pccnAIW6QnWSGGb7k6ZzH1m2j2').push({
+			this.state.dbRef.ref('users/' + this.props.user).push({
 				date: this.state.date,
 				countryInput: this.state.countryInput,
 				attrOne: this.state.attrOne,
@@ -121,6 +119,7 @@ class TravelDiary extends Component {
 			if (result.value) {
 				this.state.dbRef.ref().child(memoryId).remove();
 			}
+			console.log(memoryId);
 		});
 	};
     render() {
@@ -135,7 +134,8 @@ class TravelDiary extends Component {
 					countryInput={this.state.countryInput}
 					attrOne={this.state.attrOne}
                     inputError={this.state.inputError}
-                    autoFunction={this.onPlaceSelected}
+					autoFunction={this.onPlaceSelected}
+					user={this.props.user}
 				/>
 			</div>
 			<div>
@@ -143,7 +143,7 @@ class TravelDiary extends Component {
 					{this.state.personalMemory.map(entry => {
 						return (
 							<TravelPost
-								key={entry.id}
+								key={entry.id.user}
 								date={entry.dt.date}
 								countryInput={entry.dt.countryInput}
 								attrOne={entry.dt.attrOne}
