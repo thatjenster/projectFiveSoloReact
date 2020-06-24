@@ -138,27 +138,27 @@ class TravelDiary extends Component {
                     autoFunction={this.onPlaceSelected}
 				/>
 			</div>
-            <div className="mapSection">
+			<div>
+				<ul className="personalDiary">
+					{this.state.personalMemory.map(entry => {
+						return (
+							<TravelPost
+								key={entry.id}
+								date={entry.dt.date}
+								countryInput={entry.dt.countryInput}
+								attrOne={entry.dt.attrOne}
+								deleteEntry={() => this.deleteMemory(entry.id)}
+							/>
+						);
+					})}
+				</ul>
+			</div>
+            </section>
+			<div className="mapSection">
                 <TravelMap 
                 personalMemory={this.state.personalMemory}
                 />
 		    </div>
-            </section>
-            <div>
-			<ul className="personalDiary">
-				{this.state.personalMemory.map(entry => {
-					return (
-						<TravelPost
-							key={entry.id}
-							date={entry.dt.date}
-							countryInput={entry.dt.countryInput}
-							attrOne={entry.dt.attrOne}
-							deleteEntry={() => this.deleteMemory(entry.id)}
-						/>
-					);
-				})}
-			</ul>
-		</div>
         </main>
       )
     }

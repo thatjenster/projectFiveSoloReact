@@ -83,11 +83,11 @@ class App extends Component {
     
   render() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Nav />
         <Switch>
-          <Route exact path='/' component={Header} />
+          <Route exact path='/projectFiveSoloReact' component={Header} />
           <Route path='/journal' render={(props) => <TravelDiary {...props} user={this.user} personalMemory={this.personalMemory} /> } />
           <Route path='/signin' render={(props) => <SignIn {...props} login={this.login} updateState={this.updateState}/> } />
           <Route path="/signup" render={(props) => <SignUp {...props} updateUser={this.updateUser} /> } />
