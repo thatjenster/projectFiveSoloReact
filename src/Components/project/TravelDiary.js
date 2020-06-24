@@ -42,6 +42,7 @@ class TravelDiary extends Component {
 		const addressArray =  place.address_components;
 		const country = addressArray[0].long_name;
 		console.log(country);
+		console.log(this.props);
 
 		// Set these values in the state.
 		this.setState({
@@ -97,7 +98,7 @@ class TravelDiary extends Component {
 	// push to firebase
 				  console.log(this.state.user);
 
-			this.state.dbRef.ref().push({
+			this.state.dbRef.ref('users/X0pccnAIW6QnWSGGb7k6ZzH1m2j2').push({
 				date: this.state.date,
 				countryInput: this.state.countryInput,
 				attrOne: this.state.attrOne,
