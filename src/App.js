@@ -9,7 +9,7 @@ import Header from './Components/layout/Header';
 import Footer from './Components/layout/Footer';
 import TravelDiary from './Components/project/TravelDiary';
 import SignIn from './Components/authenication/SignIn';
-import SignUp from './Components/authenication/SignUp';
+// import SignUp from './Components/authenication/SignUp';
 
 
 class App extends Component {
@@ -52,7 +52,9 @@ class App extends Component {
             });
           }
           console.log(newState);
-          this.updateState(u, newState);
+          // this.updateState(u, newState);
+
+          console.log(this.State);
 
         });
         console.log('Successfully Logged In');
@@ -83,7 +85,7 @@ class App extends Component {
           <Route exact path='/' component={Header} />
           <Route path='/journal' render={(props) => <TravelDiary {...props} user={this.user} personalMemory={this.personalMemory} /> } />
           <Route path='/signin' render={(props) => <SignIn {...props} login={this.login} /> } />
-          <Route path="/signup" render={(props) => <SignUp {...props} updateUser={this.updateUser} /> } />
+          {/* <Route path="/signup" render={(props) => <SignUp {...props} updateUser={this.updateUser} /> } /> */}
         </Switch>
         <Footer />
       </div>

@@ -414,7 +414,7 @@ h4 {
 
 h2 {
   margin: 0 auto;
-  color: #ffff;
+  color: #000;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -452,7 +452,7 @@ form {
 }
 
 label {
-  color: #ffff;
+  color: #000;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
