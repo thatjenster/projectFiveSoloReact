@@ -12,8 +12,9 @@ h4 {
 }
 .signinBtn {
     @include allBtn;
-    margin: 20px;
+    margin: 20px auto;
     padding: 40px 20px;
+    width: 100%;
 }
 .signinBtn:hover,
 .signinBtn:focus {
