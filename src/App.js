@@ -75,7 +75,7 @@ class App extends Component {
 
   updateState = (a) => {
      console.log('user', a);
-    this.setState = ({
+    this.setState({
       user: a,
     },()=> {console.log('stateupdated')})
     console.log(a);

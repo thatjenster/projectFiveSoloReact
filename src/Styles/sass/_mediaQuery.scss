@@ -1,2 +1,23 @@
-// from desktop to mobile 
 
+// from desktop to tablet
+@media only screen and (max-width: 600px) {
+    .photo {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+//tablet to larger mobile screen
+@media only screen and (max-width: 480px) {
+    .photo {
+        width: 350px;
+        height: 350px;
+    }
+    .titleHeader {
+        font-size: 1.7rem;
+    }
+}
+//smallest mobile screen
+@media only screen and (max-width: 320px) {
+
+}

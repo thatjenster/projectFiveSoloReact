@@ -287,10 +287,6 @@ h4 {
   opacity: .6;
 }
 
-#homePage {
-  height: 100vh;
-}
-
 .photo {
   margin: 100px auto;
   width: 500px;
@@ -303,10 +299,9 @@ h4 {
 }
 
 .titleHeader {
-  position: absolute;
+  padding-top: 10px;
+  text-align: center;
   font-size: 2rem;
-  top: 40rem;
-  left: 34rem;
   font-family: "Dancing Script", cursive;
   font-weight: 600;
 }
@@ -411,6 +406,7 @@ h4 {
 .travelEntry {
   width: 600px;
   height: 600px;
+  margin: 0 10px;
 }
 
 h2 {
@@ -532,6 +528,7 @@ input {
   width: 600px;
   border: 10px solid #846075;
   border-radius: 10px;
+  margin: 0 10px;
 }
 
 .mainFooter {
@@ -566,6 +563,23 @@ input {
   font-size: 3rem;
   color: pink;
   padding: 0 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .photo {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .photo {
+    width: 350px;
+    height: 350px;
+  }
+  .titleHeader {
+    font-size: 1.7rem;
+  }
 }
 
 body {

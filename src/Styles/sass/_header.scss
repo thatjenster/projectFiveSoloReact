@@ -1,7 +1,3 @@
-#homePage {
-    height: 100vh;
-}
-
 .photo {
     margin: 100px auto;
 	width: 500px;
@@ -13,10 +9,9 @@
 }
 
 .titleHeader {
-	position: absolute;
+    padding-top: 10px;
+    text-align: center;
 	font-size: 2rem;
-    top: 40rem;
-    left: 34rem;
     font-family: $mainFont;
     font-weight: 600;
 }
