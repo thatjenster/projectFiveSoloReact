@@ -144,6 +144,12 @@ class TravelDiary extends Component {
 					user={this.props.user}
 				/>
 			</div>
+			<div className="mapSection">
+                <TravelMap 
+                personalMemory={this.state.personalMemory}
+                />
+		    </div>
+            </section>
 			<div>
 				<ul className="personalDiary">
 					{this.state.personalMemory.map(entry => {
@@ -159,12 +165,6 @@ class TravelDiary extends Component {
 					})}
 				</ul>
 			</div>
-            </section>
-			<div className="mapSection">
-                <TravelMap 
-                personalMemory={this.state.personalMemory}
-                />
-		    </div>
         </main>
       )
     }

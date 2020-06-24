@@ -1,8 +1,12 @@
 .personalBoard {
-    padding: 40px;
+    padding: 40px 0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+}
+.personalDiary {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .travelEntry {
     width: 600px;
@@ -111,4 +115,8 @@ input {
     border: 10px solid $mainColor;
     border-radius: 10px;
     margin: 0 10px;
+}
+.leaflet-div-icon {
+    background: none;
+    border: none;
 }

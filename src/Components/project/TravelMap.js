@@ -2,6 +2,7 @@ import React from 'react'
 import 'font-awesome/css/font-awesome.min.css';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import L from 'leaflet';
+// import markerPin from './../../Assets/markerpin.png'
 
 class TravelMap extends React.Component {
   constructor(props) {
@@ -10,12 +11,12 @@ class TravelMap extends React.Component {
 
   render() {
      const position = [43.6532, -79.3832];
-    //  const iconPerson = new L.Icon({
-    //     iconUrl: require('./../assets/star.jpg'),
-    //     iconRetinaUrl: require('./../assets/star.jpg'),
-    //     iconSize: new L.Point(40, 60),
-    //     className: 'leaflet-div-icon'
-    // });
+     const iconPerson = new L.Icon({
+        iconUrl: require('./../../Assets/markerpin.png'),
+        iconRetinaUrl: require('./../../Assets/markerpin.png'),
+        iconSize: new L.Point(30.74, 24),
+        className: 'leaflet-div-icon'
+    });
 
 
     return (
@@ -34,7 +35,7 @@ class TravelMap extends React.Component {
              console.log(this.props.personalMemory);
              let pos = [popper.log.markerLat, popper.log.markerLng]
             return(
-            <Marker position={pos} key={popper.id} >
+            <Marker position={pos} key={popper.id} icon={iconPerson}>
                 <Popup>
                   I was here. <br/> and it was AWESOME.
                 </Popup>

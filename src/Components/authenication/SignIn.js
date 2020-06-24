@@ -28,6 +28,8 @@ class SignIn extends Component {
         console.log(u.user.uid);
 
         this.props.updateState(u.user.uid);
+        this.props.updateDiary();
+        
         console.log('Successfully Logged In');
         })
         .catch((err) => {

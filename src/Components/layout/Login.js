@@ -16,7 +16,7 @@ class Login extends Component {
     return(
         <ul className="right">
             <li><NavLink to ='/' onClick={this.loggedOut}>Log Out</NavLink></li>
-            <li><NavLink to ='/journal' className="btn btn-floating purple"></NavLink></li>
+            {/* <li><NavLink to ='/journal' className="btn btn-floating purple"></NavLink></li> */}
         </ul>
     )
     }

@@ -1,22 +1,29 @@
-// functional Component b/c there is no state
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Login from './Login'
 import Signout from './Signout'
+import Header from './Header';
 
-const Nav = () => {
+class Nav extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render(){
+
+
     return(
         <div>
             <nav className="navWrapper">
                 <div className="contentContainer">
-                    <Link to='/' className="navLogo">Travel Memories</Link>
+                    <Link className="navLogo">Travel Memories</Link>
                     <Login />
-                    <Signout />
+                    <Signout showLogin={this.props.showLogin} showSignUp={this.props.showSignUp}/>
                 </div>
             </nav>
         </div>    
     )
+    }
 }
 
 export default Nav;

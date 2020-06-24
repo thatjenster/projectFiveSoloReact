@@ -11,12 +11,15 @@ import TravelDiary from './Components/project/TravelDiary';
 import SignIn from './Components/authenication/SignIn';
 import SignUp from './Components/authenication/SignUp';
 
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
       user: null,
+      showLogin: false,
+      showSignUp: false,
+      showHeader: true,
+      showDiary: false
     }
   }
 
@@ -27,25 +30,73 @@ class App extends Component {
     })
     console.log(a);
   }
+
+  showDiary = () => {
+    this.setState({
+      showDiary: true,
+      showLogin: false,
+      showSignUp: false,
+      showHeader: false
+    })
+    console.log('is state updateing');
+  }
+
+  showLogin = () => {
+
+    console.log('running2');
+    this.setState({
+      showLogin: true,
+      showDiary: false,
+      showSignUp: false,
+      showHeader: false
+    })
+  }
+
+    showSignUp = () => {
+
+      console.log('running1');
+      this.setState({
+        showDiary: false,
+        showLogin: false,
+        showSignUp: true,
+        showHeader: false
+      })
+
+  }
     
-  render() {
+  render() 
+  {
+    let showItem;
+    if(this.state.showSignUp && !this.state.showHeader ) {
+     showItem =  <SignUp updateState={this.updateState}/> ;
+    } else if (this.state.showLogin && !this.state.showHeader ){
+      showItem = <SignIn updateState={this.updateState} updateDiary={this.showDiary}/> ;
+    } else if (this.state.showDiary){
+      showItem = <TravelDiary  user={this.state.user}/>;
+      console.log('are we in here');
+    } 
+    else{
+      showItem = <Header />;
+    }
   return (
     <BrowserRouter >
       <div className="App">
-        <Nav />
-        <Header />
-        
-        {
-          this.state.user ?  <TravelDiary  user={this.state.user}/> :  <SignIn updateState={this.updateState}/>
-          }
-          {
+        <Nav showLogin={this.showLogin} showSignUp={this.showSignUp}/>
+
+        <div className="mainSectionContainer">
+        {/* {this.state.showSignUp ?  <SignUp updateState={this.updateState}/> :  <Header />}
+        {this.state.showLogin ?  <SignIn updateState={this.updateState}/> :  <Header />} */}
+        {showItem}
+   
+          {/* {
           !this.state.user ?  <SignUp updateState={this.updateState}/> :  <div></div>
-        }
+        } */}
+        </div>
+      
         <Footer />
       </div>
     </BrowserRouter>
-  );
+  )
   }
 }
-
 export default App;
