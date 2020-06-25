@@ -5,7 +5,7 @@ const Header = () => {
     function displayInfo(e){
         Swal.fire({
             title: 'How to use:',
-            html: 'Sign up with any email address to Begin.' + ' <br/><br/>' + 'Don\'t worry.. you don\'t need to use a real e-mail address...' + ' <br/><br/>' + 'Once Signed in, Enter a Travel Memory and see it plot on the map!',
+            html: '1. Sign up with any email address to Begin.' + ' <br/><br/>' + '2. Don\'t worry.. you don\'t need to use a real e-mail address...' + ' <br/><br/>' + '3. Once Signed in, Enter a Travel Memory and see it plot on the map!',
             showConfirmButton: false,
             timer: 4000,
             showClass: {popup: 'animate__animated animate__bounce'},

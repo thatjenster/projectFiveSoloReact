@@ -4,7 +4,7 @@ const Footer = () => {
     return(
         <div className="wrapper">
             <footer className="mainFooter">
-                <p>Developed and Designed with love and coffee <span>@thatjenster</span></p>
+                <p>Developed and Designed, with love and coffee <span>@thatjenster</span></p>
                 <div className="footerSocial">
                     <li>
                         <a href="https://twitter.com/thatjenster"><i className="fa fa-twitter" aria-hidden="true"></i></a>

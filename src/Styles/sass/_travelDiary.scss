@@ -23,7 +23,7 @@ h2 {
 }
 h3 {
     text-align: center;
-    font-family: $secondFont;
+    font-family: $mainFont;
     font-weight: 800;
     font-size: 1.5rem;
     margin: 0 auto;
@@ -71,7 +71,7 @@ input {
 .pac-item:hover,
 .pac-item:focus {
     background-color: #C9F0FF;
-    color: #000;
+    color: $fontColor;
 }
 
 // personal board style 
@@ -82,7 +82,7 @@ input {
     padding: 15px;
 }
 .eachEntry {
-    background: #fff;
+    background: #EAFFFD;
     width: 200px;
     height: 200px;
     display: inline-block;
