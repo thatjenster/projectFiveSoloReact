@@ -13,11 +13,24 @@
 //tablet to larger mobile screen
 @media only screen and (max-width: 480px) {
     .photo {
-        width: 350px;
-        height: 350px;
+        width: 320px;
+        height: 320px;
     }
     .titleHeader {
         font-size: 1.7rem;
+    }
+    .navLogo {
+        font-size: 1.2rem;
+    }
+    .navBtn {
+        button {
+            font-size: 0.8rem;
+        }
+    }
+    .leaflet-tile-container,
+    .leaflet-container,
+    .travelEntry {
+        width: 100%;
     }
 }
 //smallest mobile screen

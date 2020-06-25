@@ -238,8 +238,19 @@ html {
 
 .navWrapper {
   background-color: #846075;
-  position: -webkit-sticky;
-  position: sticky;
+}
+
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contentContainer a {
@@ -250,27 +261,30 @@ html {
   font-size: 3rem;
   letter-spacing: 3px;
   font-family: "Dancing Script", cursive;
-  padding: 0 10px;
+  padding: 5px 10px;
   color: white;
-  margin: 0 auto;
+  margin: 0;
 }
 
-.right button {
+.navBtn button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0px 20px;
+  padding: 20px;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.right button:hover,
-.right button:focus {
+.navBtn button:hover,
+.navBtn button:focus {
   color: pink;
 }
 
-.btnInital {
-  height: 50px;
+.initalDisplay {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
   border-radius: 50%;
   font-size: 2rem;
 }
@@ -557,7 +571,6 @@ input {
   opacity: .6;
 }
 
-.leaflet-tile-container,
 .leaflet-container {
   height: 500px;
   width: 80%;
@@ -625,11 +638,22 @@ input {
 
 @media only screen and (max-width: 480px) {
   .photo {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
   }
   .titleHeader {
     font-size: 1.7rem;
+  }
+  .navLogo {
+    font-size: 1.2rem;
+  }
+  .navBtn button {
+    font-size: 0.8rem;
+  }
+  .leaflet-tile-container,
+  .leaflet-container,
+  .travelEntry {
+    width: 100%;
   }
 }
 

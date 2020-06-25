@@ -29,10 +29,12 @@ class Login extends Component {
       let initials = name.match(/\b\w/g) || [];
       initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
     return(
-        <ul className="right">
-          <li><button onClick={this.loggedOut}>Log Out</button></li>
-          <li><button className="btnInital purple" >{initials}</button></li>
-        </ul>
+      <div className="contentContainer">
+        <div class="navBtn">
+          <button onClick={this.loggedOut}>Log Out</button>
+          <span className="initalDisplay pink lighten-4" >{initials}</span>
+        </div>
+      </div>
     )
     }
 }
