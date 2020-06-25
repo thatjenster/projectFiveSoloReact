@@ -66,7 +66,7 @@ class App extends Component {
     let showItem;
 
     if(this.state.showSignUp && !this.state.showHeader ) {
-      showItem =  <SignUp updateState={this.updateState} updateDisplayName={this.updateDisplayName} /> ;
+      showItem =  <SignUp updateState={this.updateState} updateDisplayName={this.updateDisplayName} showLogin={this.showLogin}/> ;
     } else if (this.state.showLogin && !this.state.showHeader ){
       showItem = <SignIn updateState={this.updateState} updateDiary={this.showDiary} updateDisplayName={this.updateDisplayName} /> ;
     } else if (this.state.showDiary){

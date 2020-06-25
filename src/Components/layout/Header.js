@@ -7,8 +7,8 @@ const Header = () => {
     function displayInfo(e){
         Swal.fire({
             title: 'How to use:',
-            text: `Sign up with any email address to Start using.
-            Don't worry, you don't need to use a real e-mail address.
+            text: `Sign up with any email address to Start using.\
+            Don't worry, you don't need to use a real e-mail address.\
             Once Signed in, Enter a Travel Memory and see it plot on the map!`,
             showConfirmButton: false,
             timer: 2000,

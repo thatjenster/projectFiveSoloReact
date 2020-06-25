@@ -36,6 +36,10 @@ class SignUp extends Component {
                 type: 'success',
                 text: 'Have a Happy Memory!',
                 confirmButtonColor: '#846075',
+            }).then((result) => {
+                if(result.value) {
+                    this.props.showLogin();
+                }
             })
     
           }).catch((err) => {
