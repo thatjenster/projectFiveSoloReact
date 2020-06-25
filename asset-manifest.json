@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projectFiveSoloReact/static/css/main.36c1232e.chunk.css",
+    "main.css": "/projectFiveSoloReact/static/css/main.6bad4c2e.chunk.css",
     "main.js": "/projectFiveSoloReact/static/js/main.e1265a3d.chunk.js",
     "main.js.map": "/projectFiveSoloReact/static/js/main.e1265a3d.chunk.js.map",
     "runtime-main.js": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js",
@@ -9,10 +9,10 @@
     "static/js/2.82cd69ea.chunk.js": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js",
     "static/js/2.82cd69ea.chunk.js.map": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js.map",
     "index.html": "/projectFiveSoloReact/index.html",
-    "precache-manifest.5fcf7dc56ff2e8a85f2f5e8ec6f56cf1.js": "/projectFiveSoloReact/precache-manifest.5fcf7dc56ff2e8a85f2f5e8ec6f56cf1.js",
+    "precache-manifest.fd64e6a616332e009fa73a580b1757c2.js": "/projectFiveSoloReact/precache-manifest.fd64e6a616332e009fa73a580b1757c2.js",
     "service-worker.js": "/projectFiveSoloReact/service-worker.js",
     "static/css/2.9af23e3e.chunk.css.map": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css.map",
-    "static/css/main.36c1232e.chunk.css.map": "/projectFiveSoloReact/static/css/main.36c1232e.chunk.css.map",
+    "static/css/main.6bad4c2e.chunk.css.map": "/projectFiveSoloReact/static/css/main.6bad4c2e.chunk.css.map",
     "static/js/2.82cd69ea.chunk.js.LICENSE.txt": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/projectFiveSoloReact/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/markerpin.png": "/projectFiveSoloReact/static/media/markerpin.ecdad0c2.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.788f95ef.js",
     "static/css/2.9af23e3e.chunk.css",
     "static/js/2.82cd69ea.chunk.js",
-    "static/css/main.36c1232e.chunk.css",
+    "static/css/main.6bad4c2e.chunk.css",
     "static/js/main.e1265a3d.chunk.js"
   ]
 }
