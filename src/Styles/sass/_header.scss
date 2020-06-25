@@ -11,9 +11,13 @@
 	background: #3B373A;
     box-shadow: 1px 1px 8px -2px rgba(0,0,0,0.75);
 }
-.infoBox {
+.infoBox a{
     margin: 0 10px;
     font-size: 1.2rem;
+}
+.infoBox a:hover,
+.infoBox a:focus {
+    color: pink;
 }
 
 .titleHeader {
