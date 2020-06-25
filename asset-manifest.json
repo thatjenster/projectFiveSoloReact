@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/projectFiveSoloReact/static/css/main.492b9825.chunk.css",
-    "main.js": "/projectFiveSoloReact/static/js/main.fe7e0b23.chunk.js",
-    "main.js.map": "/projectFiveSoloReact/static/js/main.fe7e0b23.chunk.js.map",
+    "main.js": "/projectFiveSoloReact/static/js/main.637c6236.chunk.js",
+    "main.js.map": "/projectFiveSoloReact/static/js/main.637c6236.chunk.js.map",
     "runtime-main.js": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js",
     "runtime-main.js.map": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js.map",
     "static/css/2.9af23e3e.chunk.css": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css",
     "static/js/2.a291866d.chunk.js": "/projectFiveSoloReact/static/js/2.a291866d.chunk.js",
     "static/js/2.a291866d.chunk.js.map": "/projectFiveSoloReact/static/js/2.a291866d.chunk.js.map",
     "index.html": "/projectFiveSoloReact/index.html",
-    "precache-manifest.2681be483ff61cba930f10cd698001b4.js": "/projectFiveSoloReact/precache-manifest.2681be483ff61cba930f10cd698001b4.js",
+    "precache-manifest.8a3339b534641ec843201df045cce2fb.js": "/projectFiveSoloReact/precache-manifest.8a3339b534641ec843201df045cce2fb.js",
     "service-worker.js": "/projectFiveSoloReact/service-worker.js",
     "static/css/2.9af23e3e.chunk.css.map": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css.map",
     "static/css/main.492b9825.chunk.css.map": "/projectFiveSoloReact/static/css/main.492b9825.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.9af23e3e.chunk.css",
     "static/js/2.a291866d.chunk.js",
     "static/css/main.492b9825.chunk.css",
-    "static/js/main.fe7e0b23.chunk.js"
+    "static/js/main.637c6236.chunk.js"
   ]
 }
