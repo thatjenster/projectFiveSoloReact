@@ -527,6 +527,13 @@ input {
   opacity: 0.55;
 }
 
+.textEntry {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 15px;
+}
+
 .eachEntry {
   background: #fff;
   width: 200px;
@@ -539,6 +546,41 @@ input {
           box-shadow: 0 0 2px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+.eachEntry:hover {
+  -webkit-animation: pulse 2s linear;
+          animation: pulse 2s linear;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .eachEntry:before {
@@ -583,6 +625,23 @@ input {
 .leaflet-div-icon {
   background: none;
   border: none;
+}
+
+.leaflet-marker-icon {
+  -webkit-animation: fade 1s infinite alternate;
+          animation: fade 1s infinite alternate;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
 }
 
 .mainFooter p {

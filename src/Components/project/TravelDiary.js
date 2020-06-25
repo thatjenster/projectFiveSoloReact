@@ -68,10 +68,14 @@ class TravelDiary extends Component {
 		) {
 			inputError = 'Hello! Please fill it all out.';
 		}
+		if (this.state.attrOne.length > 65) {
+			inputError = 'Please use less than 65 characthers';
+		}
 		if (inputError) {
 			this.setState({ inputError });
 			return false;
 		}
+		
 		return true;
 	};
 

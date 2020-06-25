@@ -14,7 +14,7 @@ const TravelPost = ({
 			<div className='content'>
 				<h3>{countryInput}</h3>
 				<p>{date}</p>
-				<div>{attrOne}</div>
+				<div className="textEntry">{attrOne}</div>
 			</div>
 		</li>
 	);
