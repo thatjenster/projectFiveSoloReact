@@ -62,16 +62,16 @@ input {
 }
 
 .pac-item {
-    background-color: #DB7093;
+    background-color: #EAFFFD;
     font-size: 1rem;
-    color: white;
+    color: gray;
     font-family: $secondFont;
     padding: 5px 0;
 }
 .pac-item:hover,
 .pac-item:focus {
-    background-color: #DB7093;
-    opacity: 0.55;
+    background-color: #C9F0FF;
+    color: #000;
 }
 
 // personal board style 

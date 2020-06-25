@@ -2,17 +2,15 @@ import React from 'react';
 import Swal from 'sweetalert2';
 
 const Header = () => {
-
-    // let infoBox = document.querySelector('.photo');
     function displayInfo(e){
         Swal.fire({
             title: 'How to use:',
-            text: `Sign up with any email address to Start using.\
-            Don't worry, you don't need to use a real e-mail address.\
-            Once Signed in, Enter a Travel Memory and see it plot on the map!`,
+            html: 'Sign up with any email address to Begin.' + ' <br/><br/>' + 'Don\'t worry.. you don\'t need to use a real e-mail address...' + ' <br/><br/>' + 'Once Signed in, Enter a Travel Memory and see it plot on the map!',
             showConfirmButton: false,
-            timer: 2000,
-            showClass: {popup: 'animate__animated animate__bounce'}
+            timer: 4000,
+            showClass: {popup: 'animate__animated animate__bounce'},
+            showCloseButton: true,
+            showCloseButtonColor: 'pink'
         })
       }
       
