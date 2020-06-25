@@ -22,15 +22,13 @@ class TravelMap extends React.Component {
             zoom={2} 
             preferCanvas={false}
             scrollWheelZoom={false}>
-                
+        {/* leaflet react for map */}
         <TileLayer
           attribution='&copy; <a href="http://openstreeetmap.org/copyright">OpenStreetMap</a> contributors'
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
          {this.props.personalMemory.map((popper) => {
-             console.log(popper);
-             console.log(this.props.personalMemory);
-             let pos = [popper.log.markerLat, popper.log.markerLng]
+            let pos = [popper.log.markerLat, popper.log.markerLng]
             return(
             <Marker position={pos} key={popper.id} icon={iconPerson}>
                 <Popup>
@@ -43,6 +41,5 @@ class TravelMap extends React.Component {
     );
   }
 }
-
 
 export default TravelMap;

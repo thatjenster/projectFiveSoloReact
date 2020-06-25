@@ -8,7 +8,6 @@ class SignIn extends Component {
         email: '',
         password: '',
     }
-
     handleChange = (event) => {
         this.setState({
             [event.target.id]: event.target.value
@@ -17,18 +16,16 @@ class SignIn extends Component {
     submitHandle = (event) => {
         event.preventDefault();
     }
-    login = ()=> {
+    login = () => {
         const email = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
-        
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((u) => {
-
         this.props.updateState(u.user.uid);
         this.props.updateDiary();
         this.props.updateDisplayName(u.user.displayName);
-
         })
+
         .catch((err) => {
             Swal.fire({
                 title: 'Please Try Again',
@@ -38,7 +35,7 @@ class SignIn extends Component {
                 cancelButtonColor: '#1A1423',
             })
         })
-      }
+    }
       
     render() {
         return(

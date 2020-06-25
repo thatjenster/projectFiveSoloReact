@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import firebase from './../../firebase.js';
 import 'firebase/auth';
 import Swal from 'sweetalert2';
 
 class SignUp extends Component {
-    // constructor(props) {
-    // super(props);
     state = {
         email: '',
         password: '',
         name: '',
         lastName: '',
     }
-// }
     handleChange = (event) => {
         this.setState({
             [event.target.id]: event.target.value
@@ -27,18 +23,14 @@ class SignUp extends Component {
         const password = document.querySelector('#passwordup').value;
         const firstName = document.querySelector('#name').value;
         const lastName = document.querySelector('#lastName').value;
-        // console.log(this.props.updateDisplayName('thse'), 'working');
 
         firebase.auth().createUserWithEmailAndPassword(email, password)
-
           .then((u) => {
-          
             u.user.updateProfile({
                 displayName: `${firstName} ${lastName}`
             }).then(() => {
                 this.props.updateDisplayName(u.user.displayName);
             })
-
             Swal.fire({
                 title: 'Yay, Please proceed to login',
                 type: 'success',
@@ -54,9 +46,7 @@ class SignUp extends Component {
                 confirmButtonColor: '#846075',
                 cancelButtonColor: '#1A1423',
             })
-          })
-
-
+        })
     }
     
     render() {

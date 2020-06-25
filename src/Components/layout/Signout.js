@@ -4,7 +4,6 @@ import 'firebase/auth';
 import Swal from 'sweetalert2';
 
 class Login extends Component {
-
     loggedOut = () => {  firebase.auth().signOut().then( () => {
       Swal.fire({
         title: `${this.props.displayName}, Thanks for writing a Memory`,
@@ -22,7 +21,7 @@ class Login extends Component {
           type: 'error',
           confirmButtonColor: '#846075',
       })
-      })
+    })
         
     }
     render() {
