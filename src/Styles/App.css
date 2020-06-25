@@ -344,8 +344,8 @@ h4 {
   opacity: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: develop 4s;
-          animation: develop 4s;
+  -webkit-animation: develop 6s;
+          animation: develop 6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
