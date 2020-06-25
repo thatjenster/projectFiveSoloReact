@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d77f48c43c6d5936080d9df85e9ac28d",
+    "revision": "ffe39616c9d6f000f7aad756e148a228",
     "url": "/projectFiveSoloReact/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css"
   },
   {
-    "revision": "50d4a2bdc3cef7e05968",
-    "url": "/projectFiveSoloReact/static/css/main.6bad4c2e.chunk.css"
+    "revision": "a91a72720b996df26474",
+    "url": "/projectFiveSoloReact/static/css/main.98881f5e.chunk.css"
   },
   {
     "revision": "efd0545caa48bddbc2a0",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50d4a2bdc3cef7e05968",
+    "revision": "a91a72720b996df26474",
     "url": "/projectFiveSoloReact/static/js/main.e1265a3d.chunk.js"
   },
   {
