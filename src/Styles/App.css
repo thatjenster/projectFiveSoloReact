@@ -270,7 +270,6 @@ html {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 20px;
   color: white;
   font-size: 1.2rem;
   color: #fff;
@@ -341,6 +340,11 @@ h4 {
   background: #3B373A;
   -webkit-box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+.infoBox {
+  margin: 0 10px;
+  font-size: 1.2rem;
 }
 
 .titleHeader {
