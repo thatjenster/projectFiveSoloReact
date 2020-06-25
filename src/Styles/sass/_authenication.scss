@@ -4,16 +4,22 @@
 }
 .signin {
     background-color: white;
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 60%;
+    label {
+        padding: 10px 0;
+    }
 }
 h4 {
     color: black;
+    font-family: $mainFont;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 .signinBtn {
     @include allBtn;
     margin: 20px auto;
-    padding: 40px 20px;
+    padding: 20px 10px;
     width: 100%;
 }
 .signinBtn:hover,

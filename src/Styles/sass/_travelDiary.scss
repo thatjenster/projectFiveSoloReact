@@ -3,15 +3,16 @@
     display: flex;
     justify-content: center;
 }
-.personalDiary {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+// .personalDiary {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+// }
 .travelEntry {
-    width: 600px;
-    height: 600px;
-    margin: 0 10px;
+    width: 80%;
+
+    height: 500px;
+    margin: 10px auto;
 }
 
 h2 {
@@ -110,11 +111,11 @@ input {
 
 // map style 
 .leaflet-container {
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 80%;
     border: 10px solid $mainColor;
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 10px auto;
 }
 .leaflet-div-icon {
     background: none;

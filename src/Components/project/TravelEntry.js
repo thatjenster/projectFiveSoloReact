@@ -13,8 +13,8 @@ class TravelEntry extends Component {
 
         return(
             <div>
-				{/* memory inpur form */}
-				<form className="travelEntry" action='submit'>
+				{/* memory input form */}
+				<form action='submit'>
 					<h2>Your Memories</h2>
 					<label htmlFor='date' className='date'>
 						When did you go?

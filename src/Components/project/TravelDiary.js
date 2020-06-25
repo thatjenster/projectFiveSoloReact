@@ -119,29 +119,22 @@ class TravelDiary extends Component {
 	};
     render() {
       return (
-        <main>
+        <main className="wrapper">
             <section className='personalBoard'>
-			<div>
-				{/* travel entry form to submit a new memory */}
-				<TravelEntry
-					handleChange={this.handleChange}
-					handleClick={this.handleClick}
-					date={this.state.date}
-					countryInput={this.state.countryInput}
-					attrOne={this.state.attrOne}
-                    inputError={this.state.inputError}
-					autoFunction={this.onPlaceSelected}
-					user={this.props.user}
-				/>
-			</div>
-			<div className="mapSection">
-				{/* display leaflet map */}
-                <TravelMap 
-                personalMemory={this.state.personalMemory}
-                />
-		    </div>
-            </section>
-			<div>
+				<div className="travelEntry">
+					{/* travel entry form to submit a new memory */}
+					<TravelEntry
+						handleChange={this.handleChange}
+						handleClick={this.handleClick}
+						date={this.state.date}
+						countryInput={this.state.countryInput}
+						attrOne={this.state.attrOne}
+						inputError={this.state.inputError}
+						autoFunction={this.onPlaceSelected}
+						user={this.props.user}
+					/>
+				</div>
+				<div>
 				<ul className="personalDiary">
 					{/* display memory base on user logged in */}
 					{this.state.personalMemory.map(entry => {
@@ -156,6 +149,13 @@ class TravelDiary extends Component {
 						);
 					})}
 				</ul>
+			</div>
+            </section>
+			<div className="mapContainer">
+					{/* display leaflet map */}
+					<TravelMap 
+					personalMemory={this.state.personalMemory}
+					/>
 			</div>
         </main>
       )

@@ -52,16 +52,16 @@ class SignUp extends Component {
             <div className="formContainer">
                 <form onSubmit={this.submitHandle} className="signin">
                     <h4>Register</h4>
-                    <labal htmlFor="email">Email</labal>
+                    <label htmlFor="email">Email</label>
                     <input type="email" id="emailup" onChange={this.handleChange}/>
 
-                    <labal htmlFor="password">Password</labal>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="passwordup" onChange={this.handleChange}/>
 
-                    <labal htmlFor="name">Name</labal>
+                    <label htmlFor="name">Name</label>
                     <input type="text" id="name" onChange={this.handleChange}/>
 
-                    <labal htmlFor="lastName">Last Name</labal>
+                    <label htmlFor="lastName">Last Name</label>
                     <input type="text" id="lastName" onChange={this.handleChange}/>
 
                     <Link to='/journal' ><button className="signinBtn" onClick={this.signUp}>Register</button></Link>

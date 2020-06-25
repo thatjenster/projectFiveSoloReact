@@ -12,7 +12,7 @@ class Nav extends React.Component {
         <div>
             <nav className="navWrapper">
                 <div className="contentContainer">
-                    <Link className="navLogo">Travel Memories</Link>
+                    <Link className="navLogo right">Travel Memories</Link>
                     <Signout />
                     <Login showLogin={this.props.showLogin} showSignUp={this.props.showSignUp}/>
                 </div>

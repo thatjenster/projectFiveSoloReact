@@ -14,9 +14,10 @@ class Login extends Component {
     }
     render() {
     return(
-        <ul className="right">
-            <li><NavLink to ='/' onClick={this.loggedOut}>Log Out</NavLink></li>
-            <li><NavLink to ='/journal' className="btn btn-floating purple">JD</NavLink></li>
+        <ul className="left">
+          <li><NavLink to ='/journal' className="btn btn-floating purple">JD</NavLink></li>
+          <li><NavLink to ='/' onClick={this.loggedOut}>Log Out</NavLink></li>
+            
         </ul>
     )
     }

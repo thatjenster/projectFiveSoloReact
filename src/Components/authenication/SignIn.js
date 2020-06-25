@@ -45,10 +45,10 @@ class SignIn extends Component {
             <div className="formContainer">
                 <form onSubmit={this.submitHandle} className="signin">
                     <h4>Sign In</h4>
-                    <labal htmlFor="email">Email</labal>
+                    <label htmlFor="email">Email</label>
                     <input type="email" id="email" onChange={this.handleChange}/>
 
-                    <labal htmlFor="password">Password</labal>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" onChange={this.handleChange}/>
                     <Link to='/journal' ><button className="signinBtn" onClick={this.login}>LogIn</button></Link>
                 </form>

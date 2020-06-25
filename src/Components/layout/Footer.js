@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 const Footer = () => {
     return(
-        <div>
+        <div className="wrapper">
             <footer className="mainFooter">
-                <p>Develop and Design by @thatjenster</p>
+                <p>Developed and Designed with love and coffee <span>@thatjenster</span></p>
                 <div className="footerSocial">
                     <li>
                         <a href="https://twitter.com/thatjenster"><i className="fa fa-twitter" aria-hidden="true"></i></a>

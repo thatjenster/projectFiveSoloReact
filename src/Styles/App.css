@@ -247,7 +247,8 @@ html {
 }
 
 a.navLogo {
-  font-size: 2rem;
+  font-size: 3rem;
+  letter-spacing: 3px;
   font-family: "Dancing Script", cursive;
   padding: 0 10px;
 }
@@ -258,12 +259,19 @@ a.navLogo {
 
 .signin {
   background-color: white;
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 60%;
+}
+
+.signin label {
+  padding: 10px 0;
 }
 
 h4 {
   color: black;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .signinBtn {
@@ -278,7 +286,7 @@ h4 {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin: 20px auto;
-  padding: 40px 20px;
+  padding: 20px 10px;
   width: 100%;
 }
 
@@ -405,21 +413,10 @@ h4 {
           justify-content: center;
 }
 
-.personalDiary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .travelEntry {
-  width: 600px;
-  height: 600px;
-  margin: 0 10px;
+  width: 80%;
+  height: 500px;
+  margin: 10px auto;
 }
 
 h2 {
@@ -537,11 +534,11 @@ input {
 }
 
 .leaflet-container {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 80%;
   border: 10px solid #846075;
   border-radius: 10px;
-  margin: 0 10px;
+  margin: 10px auto;
 }
 
 .leaflet-div-icon {
@@ -555,6 +552,12 @@ input {
   font-family: "Lato", sans-serif;
   padding: 10px 0;
   text-align: center;
+}
+
+.mainFooter span {
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
 }
 
 .footerSocial {
@@ -584,6 +587,9 @@ input {
     width: 450px;
     height: 450px;
   }
+  .signin {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -596,11 +602,19 @@ input {
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .photo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 body {
   background-color: #EFEFF0;
 }
 
-html {
-  height: 100%;
+.warpper {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=App.css.map */
