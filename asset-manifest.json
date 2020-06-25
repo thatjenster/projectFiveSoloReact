@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/projectFiveSoloReact/static/css/main.37d54c4d.chunk.css",
-    "main.js": "/projectFiveSoloReact/static/js/main.32f4faf3.chunk.js",
-    "main.js.map": "/projectFiveSoloReact/static/js/main.32f4faf3.chunk.js.map",
+    "main.css": "/projectFiveSoloReact/static/css/main.492b9825.chunk.css",
+    "main.js": "/projectFiveSoloReact/static/js/main.fe7e0b23.chunk.js",
+    "main.js.map": "/projectFiveSoloReact/static/js/main.fe7e0b23.chunk.js.map",
     "runtime-main.js": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js",
     "runtime-main.js.map": "/projectFiveSoloReact/static/js/runtime-main.788f95ef.js.map",
     "static/css/2.9af23e3e.chunk.css": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css",
-    "static/js/2.82cd69ea.chunk.js": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js",
-    "static/js/2.82cd69ea.chunk.js.map": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js.map",
+    "static/js/2.a291866d.chunk.js": "/projectFiveSoloReact/static/js/2.a291866d.chunk.js",
+    "static/js/2.a291866d.chunk.js.map": "/projectFiveSoloReact/static/js/2.a291866d.chunk.js.map",
     "index.html": "/projectFiveSoloReact/index.html",
-    "precache-manifest.9d37421d953827dacd955e8150760ba3.js": "/projectFiveSoloReact/precache-manifest.9d37421d953827dacd955e8150760ba3.js",
+    "precache-manifest.2681be483ff61cba930f10cd698001b4.js": "/projectFiveSoloReact/precache-manifest.2681be483ff61cba930f10cd698001b4.js",
     "service-worker.js": "/projectFiveSoloReact/service-worker.js",
     "static/css/2.9af23e3e.chunk.css.map": "/projectFiveSoloReact/static/css/2.9af23e3e.chunk.css.map",
-    "static/css/main.37d54c4d.chunk.css.map": "/projectFiveSoloReact/static/css/main.37d54c4d.chunk.css.map",
-    "static/js/2.82cd69ea.chunk.js.LICENSE.txt": "/projectFiveSoloReact/static/js/2.82cd69ea.chunk.js.LICENSE.txt",
+    "static/css/main.492b9825.chunk.css.map": "/projectFiveSoloReact/static/css/main.492b9825.chunk.css.map",
+    "static/js/2.a291866d.chunk.js.LICENSE.txt": "/projectFiveSoloReact/static/js/2.a291866d.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/projectFiveSoloReact/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/markerpin.png": "/projectFiveSoloReact/static/media/markerpin.ecdad0c2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.788f95ef.js",
     "static/css/2.9af23e3e.chunk.css",
-    "static/js/2.82cd69ea.chunk.js",
-    "static/css/main.37d54c4d.chunk.css",
-    "static/js/main.32f4faf3.chunk.js"
+    "static/js/2.a291866d.chunk.js",
+    "static/css/main.492b9825.chunk.css",
+    "static/js/main.fe7e0b23.chunk.js"
   ]
 }
