@@ -12,6 +12,7 @@ class TravelEntry extends Component {
 		} = this.props;
 
         return(
+			
             <div>
 				{/* memory input form */}
 				<form action='submit'>
@@ -23,7 +24,7 @@ class TravelEntry extends Component {
                     <label htmlFor='countryInput'>Where did you go?</label>
 					{/* autocomplete from google to get location */}
 					<Autocomplete
-						apiKey= 'AIzaSyA0q4l001f40aI0cHAqqWcebpVOPJNr_XE'
+						apiKey= {process.env.REACT_APP_GMAP_API_KEY}
 						onPlaceSelected={ (place) => {
 							this.props.autoFunction(place);
 						  }}

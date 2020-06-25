@@ -246,11 +246,33 @@ html {
   font-size: 1rem;
 }
 
-a.navLogo {
+.navLogo {
   font-size: 3rem;
   letter-spacing: 3px;
   font-family: "Dancing Script", cursive;
   padding: 0 10px;
+  color: white;
+  margin: 0 auto;
+}
+
+.right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0px 20px;
+  color: white;
+  font-size: 1rem;
+}
+
+.right button:hover,
+.right button:focus {
+  color: pink;
+}
+
+.btnInital {
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
 }
 
 .formContainer {
@@ -405,9 +427,14 @@ h4 {
 
 .personalBoard {
   padding: 40px 0;
+}
+
+.personalDiary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -490,8 +517,8 @@ input {
 
 .eachEntry {
   background: #fff;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   margin: 20px;
   padding: 5px;
@@ -558,6 +585,7 @@ input {
   font-weight: 900;
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
+  display: block;
 }
 
 .footerSocial {
@@ -580,6 +608,11 @@ input {
   font-size: 3rem;
   color: #846075;
   padding: 0 20px;
+}
+
+.footerSocial a:hover,
+.footerSocial a:focus {
+  color: pink;
 }
 
 @media only screen and (max-width: 600px) {

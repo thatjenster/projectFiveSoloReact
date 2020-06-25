@@ -18,7 +18,8 @@ class App extends Component {
       showLogin: false,
       showSignUp: false,
       showHeader: true,
-      showDiary: false
+      showDiary: false,
+      displayName: ''
     }
   }
 
@@ -55,15 +56,21 @@ class App extends Component {
     })
 
   }
+  updateDisplayName = (name) => {
+    this.setState ({
+      displayName: name
+    })
+  }
     
   render() {
     let showItem;
+
     if(this.state.showSignUp && !this.state.showHeader ) {
-     showItem =  <SignUp updateState={this.updateState}/> ;
+      showItem =  <SignUp updateState={this.updateState} updateDisplayName={this.updateDisplayName} /> ;
     } else if (this.state.showLogin && !this.state.showHeader ){
-      showItem = <SignIn updateState={this.updateState} updateDiary={this.showDiary}/> ;
+      showItem = <SignIn updateState={this.updateState} updateDiary={this.showDiary} updateDisplayName={this.updateDisplayName} /> ;
     } else if (this.state.showDiary){
-      showItem = <TravelDiary  user={this.state.user}/>;
+      showItem = <TravelDiary  user={this.state.user} />;
     } 
     else{
       showItem = <Header />;
@@ -72,7 +79,7 @@ class App extends Component {
   return (
     <BrowserRouter >
       <div className="App">
-        <Nav showLogin={this.showLogin} showSignUp={this.showSignUp}/>
+        <Nav showLogin={this.showLogin} showSignUp={this.showSignUp} user={this.state.user} displayName={this.state.displayName}/>
         <div className="mainSectionContainer">
         {showItem}
         </div>

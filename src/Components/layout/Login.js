@@ -7,9 +7,9 @@ class Signout extends React.Component {
 
     render(){
     return(
-        <ul className="left">
-            <li><a onClick={this.props.showSignUp}>Sign Up</a></li>
-            <li><a onClick={this.props.showLogin}>LogIn</a></li>
+        <ul className="right">
+            <li><button onClick={this.props.showSignUp}>Sign Up</button></li>
+            <li><button onClick={this.props.showLogin}>LogIn</button></li>
         </ul>
     )
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import firebase from './../../firebase.js';
 import 'firebase/auth';
 import Swal from 'sweetalert2';
@@ -27,6 +26,7 @@ class SignIn extends Component {
 
         this.props.updateState(u.user.uid);
         this.props.updateDiary();
+        this.props.updateDisplayName(u.user.displayName);
 
         })
         .catch((err) => {
@@ -50,7 +50,7 @@ class SignIn extends Component {
 
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" onChange={this.handleChange}/>
-                    <Link to='/journal' ><button className="signinBtn" onClick={this.login}>LogIn</button></Link>
+                    <button className="signinBtn" onClick={this.login}>LogIn</button>
                 </form>
 
             </div>

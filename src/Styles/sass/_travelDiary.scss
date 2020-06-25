@@ -1,16 +1,14 @@
 .personalBoard {
     padding: 40px 0;
+
+}
+.personalDiary {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-// .personalDiary {
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-// }
 .travelEntry {
     width: 80%;
-
     height: 500px;
     margin: 10px auto;
 }
@@ -62,6 +60,7 @@ input {
     font: 400 1.5rem $secondFont;
     color: $mainColor;
 }
+
 .pac-item {
     background-color: #DB7093;
     font-size: 1rem;
@@ -78,8 +77,8 @@ input {
 // personal board style 
 .eachEntry {
     background: #fff;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     display: inline-block;
     margin: 20px;
     padding: 5px;

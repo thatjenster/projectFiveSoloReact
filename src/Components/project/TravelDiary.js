@@ -134,7 +134,8 @@ class TravelDiary extends Component {
 						user={this.props.user}
 					/>
 				</div>
-				<div>
+            </section>
+			<div>
 				<ul className="personalDiary">
 					{/* display memory base on user logged in */}
 					{this.state.personalMemory.map(entry => {
@@ -149,8 +150,7 @@ class TravelDiary extends Component {
 						);
 					})}
 				</ul>
-			</div>
-            </section>
+				</div>
 			<div className="mapContainer">
 					{/* display leaflet map */}
 					<TravelMap 

@@ -10,6 +10,7 @@
         font-weight: 900;
         font-family: $mainFont;
         font-size: 3rem;
+        display: block;
     }
 }
 
@@ -26,5 +27,9 @@
         font-size: 3rem;
         color: $mainColor;
         padding: 0 20px;
+    }
+    a:hover,
+    a:focus {
+        color: pink;
     }
 }

@@ -9,7 +9,7 @@ class TravelMap extends React.Component {
   }
 
   render() {
-     const position = [43.6532, -79.3832];
+     const position = [23.42, 53.85];
      const iconPerson = new L.Icon({
         iconUrl: require('./../../Assets/markerpin.png'),
         iconRetinaUrl: require('./../../Assets/markerpin.png'),

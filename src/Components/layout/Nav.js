@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Login from './Login'
 import Signout from './Signout'
 
@@ -12,9 +11,8 @@ class Nav extends React.Component {
         <div>
             <nav className="navWrapper">
                 <div className="contentContainer">
-                    <Link className="navLogo right">Travel Memories</Link>
-                    <Signout />
-                    <Login showLogin={this.props.showLogin} showSignUp={this.props.showSignUp}/>
+                    <h4 className="navLogo left">Travel Memories</h4>
+                    {this.props.user ? <Signout displayName={this.props.displayName}/> : <Login showLogin={this.props.showLogin} showSignUp={this.props.showSignUp}/>}
                 </div>
             </nav>
         </div>    
