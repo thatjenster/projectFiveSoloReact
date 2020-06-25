@@ -32,7 +32,7 @@ class Login extends Component {
       <div className="contentContainer">
         <div class="navBtn">
           <button onClick={this.loggedOut}>Log Out</button>
-          <span className="initalDisplay pink lighten-4" >{initials}</span>
+          <span className="initalDisplay pink lighten-4 circle" >{initials}</span>
         </div>
       </div>
     )
