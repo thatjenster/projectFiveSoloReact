@@ -15,6 +15,9 @@ const Footer = () => {
                     <li>
                         <a href="https://www.instagram.com/jennyt.dinh/" target="_blank"><i className="fa fa-instagram" aria-hidden="true"></i></a>
                     </li>
+                    <li>
+                        <a href="https://thatjenster.io/" target="_blank"><i className="fa fa-globe" aria-hidden="true"></i></a>
+                    </li>
                 </div>
             </footer>
         </div>
