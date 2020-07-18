@@ -108,6 +108,7 @@ class TravelDiary extends Component {
 
 	// delete personalMemory that user inputted 
 	deleteMemory = memoryId => {
+		console.log(memoryId);
 		Swal.fire({
 			title: 'Are you sure you want to delete this Memory?',
 			type: 'warning',

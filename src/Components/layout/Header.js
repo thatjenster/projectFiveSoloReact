@@ -1,5 +1,6 @@
 import React from 'react';
 import Swal from 'sweetalert2';
+import fuji from './../../Assets/mountfuji.png'
 
 const Header = () => {
     function displayInfo(e){
@@ -7,7 +8,6 @@ const Header = () => {
             title: 'How to use:',
             html: '1. Sign up with any email address to Begin. (DON\'T WORRY... you don\'t need to use a real e-mail address, just an e-mail in correct format).' + ' <br/><br/>' + '2. This site does not send any spam emails &#128523;' + ' <br/><br/>' + '3. Once Signed in, Enter a Travel Memory and see it plot on the map!',
             showConfirmButton: false,
-            timer: 5500,
             showClass: {popup: 'animate__animated animate__bounce'},
             showCloseButton: true,
             showCloseButtonColor: 'pink'
