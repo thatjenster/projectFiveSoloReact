@@ -23,6 +23,7 @@ class TravelDiary extends Component {
 	}
 	// fetch latest memory from firebase and update state
     componentDidMount() {
+		if (this.props.user !== true) {
 		this.state.dbRef.ref('users/' + this.props.user).on('value', response => {
 			const newState = [];
 			const data = response.val();
@@ -37,6 +38,7 @@ class TravelDiary extends Component {
 			});
 		});
 	}
+	}	
 	// event run after google autocomplete
     onPlaceSelected = ( place ) => {
 		const addressArray =  place.address_components;
@@ -96,15 +98,44 @@ class TravelDiary extends Component {
 			});
 
 	// push to firebase
-		this.state.dbRef.ref('users/' + this.props.user).push({
-			date: this.state.date,
-			countryInput: this.state.countryInput,
-			attrOne: this.state.attrOne,
-			markerLat: this.state.markerPosition.lat,
-			markerLng: this.state.markerPosition.lng
-		});
+		if (this.props.user !== true) {
+			this.state.dbRef.ref('users/' + this.props.user).push({
+				date: this.state.date,
+				countryInput: this.state.countryInput,
+				attrOne: this.state.attrOne,
+				markerLat: this.state.markerPosition.lat,
+				markerLng: this.state.markerPosition.lng
+			});
+			} else if (this.props.user === true) {
+				console.log("You are unknown user");
+				let newObject = {};
+				newObject = {
+					id: 1, 
+					log: {
+						date: this.state.date,
+						countryInput: this.state.countryInput,
+						attrOne: this.state.attrOne,
+						markerLat: this.state.markerPosition.lat,
+						markerLng: this.state.markerPosition.lng
+					}
+				}	
+				let tempMemory = this.state.personalMemory;
+				tempMemory.push(newObject);
+				this.setState({
+					personalMemory: tempMemory
+				})
+			}
 		}
-	};
+		}
+	// 	this.state.dbRef.ref('users/' + this.props.user).push({
+	// 		date: this.state.date,
+	// 		countryInput: this.state.countryInput,
+	// 		attrOne: this.state.attrOne,
+	// 		markerLat: this.state.markerPosition.lat,
+	// 		markerLng: this.state.markerPosition.lng
+	// 	});
+	// 	}
+	// };
 
 	// delete personalMemory that user inputted 
 	deleteMemory = memoryId => {
@@ -117,8 +148,10 @@ class TravelDiary extends Component {
 			cancelButtonColor: '#1A1423',
 			confirmButtonText: 'Yes, delete it!'
 		}).then(result => {
-			if (result.value) {
+			if (result.value && this.props.user !== true) {
 				this.state.dbRef.ref('users/' + this.props.user).child(memoryId).remove();
+			} else if (result.value && this.props.user === true) {
+
 			}
 		});
 	};

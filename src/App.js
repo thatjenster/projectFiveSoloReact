@@ -26,6 +26,7 @@ class App extends Component {
   updateState = (a) => {
     this.setState({
       user: a,
+      
     })
   }
 

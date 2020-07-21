@@ -28,6 +28,7 @@ class Login extends Component {
       let name = this.props.displayName;
       let initials = name.match(/\b\w/g) || [];
       initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
+
     return(
       <div className="contentContainer">
         <div class="navBtn">

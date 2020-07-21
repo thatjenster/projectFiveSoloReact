@@ -36,6 +36,32 @@ class SignIn extends Component {
             })
         })
     }
+
+    handleClickAnonymously = (e) => {
+        e.preventDefault();
+        firebase.auth().signInAnonymously()
+        .then((u) => {
+            console.log(u)
+            this.props.updateDiary();
+            this.props.updateState(u.user.isAnonymous);
+            this.props.updateDisplayName("Anonymous User");
+        })
+        .catch(error => {
+            console.log(error);
+        });
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              let isAnonymous = user.isAnonymous;
+              let uid = user.uid;
+              // ...
+            } else {
+              // User is signed out.
+              // ...
+            }
+            // ...
+          });
+    }
       
     render() {
         return(
@@ -48,6 +74,7 @@ class SignIn extends Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" onChange={this.handleChange}/>
                     <button className="signinBtn" onClick={this.login}>LogIn</button>
+                    <button className="signinBtn" onClick={this.handleClickAnonymously}> LogIn Anonymously </button>
                 </form>
 
             </div>
