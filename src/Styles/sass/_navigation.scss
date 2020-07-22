@@ -16,9 +16,11 @@
     font-size: 3rem;
     letter-spacing: 3px;
     font-family: $mainFont;
-    padding: 5px 10px;
+    background: transparent;
     color: white;
     margin: 0;
+    padding: 5px 0;
+    border: none;
 }
 
 .navBtn {

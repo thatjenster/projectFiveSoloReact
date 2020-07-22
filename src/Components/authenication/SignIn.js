@@ -74,6 +74,7 @@ class SignIn extends Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" onChange={this.handleChange}/>
                     <button className="signinBtn" onClick={this.login}>LogIn</button>
+                    <p> --- OR ---</p>
                     <button className="signinBtn" onClick={this.handleClickAnonymously}> LogIn Anonymously </button>
                 </form>
 

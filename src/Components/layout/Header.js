@@ -6,7 +6,7 @@ const Header = () => {
     function displayInfo(e){
         Swal.fire({
             title: 'How to use:',
-            html: '1. Sign up with any email address to Begin. (DON\'T WORRY... you don\'t need to use a real e-mail address, just an e-mail in correct format).' + ' <br/><br/>' + '2. This site does not send any spam emails &#128523;' + ' <br/><br/>' + '3. Once Signed in, Enter a Travel Memory and see it plot on the map!',
+            html: '1. Sign up with any email address to Begin. (DON\'T WORRY... you don\'t need to use a real e-mail address, just an e-mail in correct format).' + ' <br/><br/>' + '2. This site does not send any spam emails &#128523;' + ' <br/><br/>' + '3. Or Choose to login in Anonymously. No data will be saved though!' + ' <br/><br/>' + '4. Once Signed in, Enter a Travel Memory and see it plot on the map!',
             showConfirmButton: false,
             showClass: {popup: 'animate__animated animate__bounce'},
             showCloseButton: true,

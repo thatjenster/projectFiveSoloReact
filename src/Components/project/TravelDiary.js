@@ -110,7 +110,7 @@ class TravelDiary extends Component {
 				console.log("You are unknown user");
 				let newObject = {};
 				newObject = {
-					id: 1, 
+					id: 1 + Math.random(),
 					log: {
 						date: this.state.date,
 						countryInput: this.state.countryInput,
@@ -127,16 +127,6 @@ class TravelDiary extends Component {
 			}
 		}
 		}
-	// 	this.state.dbRef.ref('users/' + this.props.user).push({
-	// 		date: this.state.date,
-	// 		countryInput: this.state.countryInput,
-	// 		attrOne: this.state.attrOne,
-	// 		markerLat: this.state.markerPosition.lat,
-	// 		markerLng: this.state.markerPosition.lng
-	// 	});
-	// 	}
-	// };
-
 	// delete personalMemory that user inputted 
 	deleteMemory = memoryId => {
 		console.log(memoryId);
@@ -150,9 +140,17 @@ class TravelDiary extends Component {
 		}).then(result => {
 			if (result.value && this.props.user !== true) {
 				this.state.dbRef.ref('users/' + this.props.user).child(memoryId).remove();
+				console.log("in if", memoryId);
 			} else if (result.value && this.props.user === true) {
-
-			}
+				const tempMemory = [...this.state.personalMemory]
+				console.log("tempMeory", tempMemory);
+				const updatedMemory = tempMemory.filter(entry => entry.id !== memoryId);
+				console.log(updatedMemory);
+				this.setState({
+					personalMemory: updatedMemory
+				})
+				console.log(updatedMemory);
+			}	
 		});
 	};
     render() {
