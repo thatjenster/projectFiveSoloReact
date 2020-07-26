@@ -1,4 +1,38 @@
+# Travel Memories
+Finally your own Travel Diary! Sign up for this application and plot where you've travelled to on a map. Write a few notes about that destination you've been to and forever keep it in your memories.
+
+# Architecture
+
+Travel Memories is a serverless Javascript app using Google Firebase to handle data storage and handle user creation/authentication. This app also uses Google Maps API to allow users to search for Locations/Landmarks from Google Map's large database.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Built with
+
+- HTML and CSS
+- ReactJs (to handle state change)
+- Google Maps API (to search Locations and Landmarks from around the world)
+- Google Firebase  (managed user creation/authentication and data storage)
+- LeafletJS (Map API that renders a map to display all your Travel Memories
+
+# Usage
+
+1. **Sign-up** with an account by providing and e-mail address
+    * *If* you don't want to register an account, you can access the application **anonymously** 
+    * When you **Sign-in** ***anonymously***, all travel memories that are created will be lost after you log-out or when you exit your session
+2. **Sign-in** to the application
+3. **Create a Travel Memory** by supplying a *Date*, a *Destination*, and write down a *Favorite Moment* from that destination. 
+4. Select **Post Me!**
+5. **View** all your listed memories and see them displayed on a map
+
+# Demo
+Click [here](https://thatjenster.github.io/projectFiveSoloReact/) try it out!
+
+# Authors
+
+Made with 💌 and ☕ by **[Jenny Dinh](https://github.com/thatjenster)** 
+
+# How to run
 
 ## Available Scripts
 
@@ -37,32 +71,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
